@@ -12,8 +12,9 @@ p {
     grid-template-areas: 
     'menu-de-navegacion filtro'
     'menu-de-navegacion seccion-principal'
-    'pie-de-pagina seccion-principal';
-    grid-template-columns: 20% auto;    
+    'pie-de-pagina  paginacion';
+    grid-template-columns: 20% auto;
+    height: 100vh;    
 }
 .menu-lateral {
     grid-area: menu-de-navegacion;
@@ -69,7 +70,7 @@ select {
 }
 p.indicador-buscador {
     margin: 0;
-    color: wheat;
+    color: #f5deb3;
 }
 .menu-principal {
     grid-area: seccion-principal;
@@ -82,6 +83,7 @@ p.indicador-buscador {
     gap: 3%;
     padding-top: 6%;
     padding-left: 1%;
+    overflow-y: auto;
     
 }
 .boton-box {
@@ -113,9 +115,11 @@ img {
     width: 100%;
 }
 .paginacion {
+    grid-area: paginacion;
     display: flex;
     justify-content: center;
     padding-top: 3%;
+    background-color: #fff9c4;    
 }
 .footer {
     grid-area: pie-de-pagina;
@@ -124,7 +128,7 @@ img {
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 11vh;
+    
 }
 .iconos-footer {
     padding-top: 4%;
@@ -136,8 +140,10 @@ img {
         grid-template-areas: 
         'menu-de-navegacion menu-de-navegacion menu-de-navegacion'
         'filtro seccion-principal seccion-principal'
+        'filtro paginacion paginacion'
         'pie-de-pagina pie-de-pagina pie-de-pagina';
         grid-template-columns: 20% 40% 40%;        
+        height: 100vh;
     }
     .hidden {
         display: none;
@@ -193,9 +199,7 @@ img {
         padding-top: 0;
         
     }
-    .menu-principal {
-        height: 81vh;
-    }
+    
     .paginacion {
         
         padding-top: 6% 
@@ -214,9 +218,10 @@ img {
         'menu-de-navegacion'
         'filtro'
         'seccion-principal'
+        'paginacion'
         'pie-de-pagina';
         grid-template-columns: 1fr;
-        height: 100%;
+        height: 100vh;
     }
     
     .hidden {
@@ -231,7 +236,7 @@ img {
     .menu-lateral {
         display: flex;
         padding-bottom: 3%;
-        width: 100vw;
+        
     }
     .iconos-menu {
         display: flex;
@@ -245,22 +250,21 @@ img {
         width: 100%;
         height: 40px;
         padding-top: 0;
+        padding-right: 4%;
     }    
     .buscador {
         padding-top: 1%;
-        height: 11vh;
+        
     }
     .indicador-buscador {
         margin: 0;
     }
-    .menu-principal {
-        height: 72vh;        
-    }
+  
     .carta {
         width: 53%;
     }
     .box-cards {
-        padding-top: 1%;
+        padding-top: 3%;
     }
     nav {
         display: flex;
